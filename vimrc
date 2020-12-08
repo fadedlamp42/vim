@@ -1,9 +1,9 @@
 "behavior
+set nocompatible
 set autochdir               "working directory is always directory of current file
 filetype plugin on          "netrw file browser
 filetype plugin indent on   "filetype specific indenting
 set mouse=a                 "mouse support
-set cursorline              "highlight line being edited
 set nu rnu                  "hybrid line numbers
 set showcmd                 "show command being typed
 set wildmenu                "visual autocomplete for commands
@@ -19,8 +19,10 @@ set foldlevelstart=99
 "visual
 set hidden                  "allow hiding modified buffer
 set scrolloff=10            "10 lines above/below
-colorscheme fadedwolf
+set cursorline              "highlight line being edited
 set t_Co=256
+colorscheme fadedwolf
+hi CursorLineNr cterm=bold
 
 "searching
 set path+=**                "find searches downward with depth of 30 from working dir, **n changes the amount of layers
